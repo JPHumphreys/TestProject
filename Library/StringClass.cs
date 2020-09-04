@@ -59,6 +59,8 @@ namespace Library
         //This function checks if the string is the same forward as backwards
         // eg => "racecar" or "wow"
 
+        //HINT: for loops can go backwards too! i--
+
         //Difficulty 5/5
         public static bool IsPalindrome(string testString)
         {
