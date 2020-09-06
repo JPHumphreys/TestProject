@@ -23,7 +23,11 @@ namespace Library
             bool fizz = (number % 3 == 0);
             bool buzz = (number % 5 == 0);
 
-            
+            if (fizz == true & buzz == true)
+            {
+                Convert.ToString("fizzbuzz");
+                return "fizzbuzz";
+            }
             if (fizz == true)
             {
                 Convert.ToString("fizz");
@@ -34,9 +38,10 @@ namespace Library
                 Convert.ToString("buzz");
                 return "buzz";
             }
-
-            return ;
-           
+            else
+            {
+                return "not found";
+            }
         }
     }
 }
