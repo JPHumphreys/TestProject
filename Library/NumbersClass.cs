@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 
 namespace Library
@@ -12,18 +13,27 @@ namespace Library
         //Difficulty 2/5
         public static bool IsDivisibleBy4or6(int num)
         {
-
-            return false;
+            if (num % 4 == 0) {
+                return true;
+            }
+            if (num % 6 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-
         //This function multiplies the number recieved in paramater by 10
         //and returns it
 
         //Difficulty 1/5
         public static int MultiplyBy10(int num)
         {
+            int response = num * 10;
 
-            return -1;
+            return response;
         }
 
         //This function gets the difference between these two numbers
@@ -32,10 +42,17 @@ namespace Library
         //Difficulty 3/5
         public static int Difference(int num1, int num2)
         {
-
             
+            int result = num1 - num2;
 
-            return -1;
+            bool negative = result < 0;
+
+            if (negative == true)
+            {
+               return result*-1;
+            }
+
+            return result;
         }
     }
 }
