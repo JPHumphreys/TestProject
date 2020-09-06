@@ -1,4 +1,8 @@
 ﻿
+using System;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
+
 namespace Library
 {
     public class FizzBuzzClass
@@ -15,10 +19,24 @@ namespace Library
          */
         //Difficulty 2/5
         public static string FizzBuzz(int number)
-        { 
-            
+        {
+            bool fizz = (number % 3 == 0);
+            bool buzz = (number % 5 == 0);
 
-            return "test";
+            
+            if (fizz == true)
+            {
+                Convert.ToString("fizz");
+                return "fizz";
+            }
+            if (buzz == true)
+            {
+                Convert.ToString("buzz");
+                return "buzz";
+            }
+
+            return ;
+           
         }
     }
 }
