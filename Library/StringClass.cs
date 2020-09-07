@@ -13,14 +13,16 @@ namespace Library
         {
             string lowerString = testString.ToLower();
             var counter = 0;
+            char compare = 'j';
 
-            for (int i = 0; i < testString.ToLower().Length; i++)
+            for (int i = 0; i < lowerString.Length; i++)
             {
-                
-
-
+                char character = lowerString[i];
+                if (character == compare)
+                {
+                    counter += 1;
+                }
             }
-
             return counter;
          }
 
@@ -61,8 +63,33 @@ namespace Library
         //Difficulty 5/5
         public static int SuperBlock(string testString)
         {
+            var counter = 0;
+            var longestChain = 0;
+            char lastCharacter = testString[0];
 
-            return -1;
+            if(testString[0] == ' ')
+            {
+                return 0;
+            }
+            for (int i = 0; i < testString.Length; i++)
+            {
+                char character = testString[i];
+                if ( character == lastCharacter)
+                {
+                    counter += 1;
+                }
+                else
+                {
+                    counter = 0;
+                }
+                
+                if(counter > longestChain)
+                {
+                    longestChain = counter;
+                }
+                lastCharacter = character;
+            }
+            return longestChain;
         }
 
         //This function checks if the string is the same forward as backwards
