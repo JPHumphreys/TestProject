@@ -11,9 +11,18 @@ namespace Library
         //Difficulty 3/5
         public static int CountJs(string testString)
         {
+            string lowerString = testString.ToLower();
+            var counter = 0;
 
-            return -1;
-        }
+            for (int i = 0; i < testString.ToLower().Length; i++)
+            {
+                
+
+
+            }
+
+            return counter;
+         }
 
 
         //This functions removed undesirables from a string
