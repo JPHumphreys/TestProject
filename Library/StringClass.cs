@@ -39,11 +39,7 @@ namespace Library
         //Difficulty 4/5
         public static string RemoveArtefacts(string testString)
         {
-
-
-
-
-            return "test";
+            return testString.Trim(' ','-').ToLower();
         }
 
         //SUPER BLOCK
@@ -100,8 +96,23 @@ namespace Library
         //Difficulty 5/5
         public static bool IsPalindrome(string testString)
         {
+            string forwardString = testString;
+            string backwardString = "";
 
-            return true;
+            for (int i = testString.Length -1; i >=0; i--)
+            {
+                string character = testString[i].ToString();
+                backwardString += character;
+            }
+            
+            if (forwardString == backwardString)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

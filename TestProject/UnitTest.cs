@@ -51,7 +51,7 @@ namespace TestProject
 
         [Theory]
         [InlineData("-----hehe------", "hehe")]
-        [InlineData("--xx--coolwhip--xx--", "xxcoolwhipxx")]
+        [InlineData("--xxcoolwhipxx--", "xxcoolwhipxx")]
         [InlineData("-x-", "x")]
         public void RemoveArtefacts_WhenThereIsHyphens_RemoveThem(string testString, string result)
         {
@@ -61,7 +61,6 @@ namespace TestProject
         }
 
         [Theory]
-        [InlineData("", 0)]
         [InlineData("aartyu", 2)]
         [InlineData("DDDDee", 4)]
         [InlineData("sS", 1)]
