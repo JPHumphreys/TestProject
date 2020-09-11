@@ -170,5 +170,60 @@ namespace TestProject
 
             Assert.Equal(expected, test);
         }
+
+        [Theory]
+        [InlineData(0.2018, 0)]
+        [InlineData(123.123, 123)]
+        [InlineData(-0.2, -1)]
+        public void FloorValue_WhenValueIsFloorable_ReturnCorrectValue(decimal num, int result)
+        {
+            var test = NumbersClass.FloorValue(num);
+
+            Assert.Equal(result, test);
+        }
+
+        [Theory]
+        [InlineData(2,3,3.61)]
+        [InlineData(23,5,23.54)]
+        [InlineData(7,9,11.4)]
+
+        public void PythagoreanTheorem_WhenValuesAreCorrect_ReturnCorrectValues(int a, int b, double result)
+        {
+            var test = NumbersClass.PythagoreanTheorem(a, b);
+
+            Assert.Equal(result, test);
+        }
+
+        [Theory]
+        [InlineData(7, "If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", "Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, aoha uva h dvyk jvbsk il thkl vba.")]
+        [InlineData(5, "If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", "Nk mj mfi fsdymnsl htsknijsynfq yt xfd, mj bwtyj ny ns hnumjw, ymfy nx, gd xt hmfslnsl ymj twijw tk ymj qjyyjwx tk ymj fqumfgjy, ymfy sty f btwi htzqi gj rfij tzy.")]
+        [InlineData(2, "If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", "Kh jg jcf cpavjkpi eqphkfgpvkcn vq uca, jg ytqvg kv kp ekrjgt, vjcv ku, da uq ejcpikpi vjg qtfgt qh vjg ngvvgtu qh vjg cnrjcdgv, vjcv pqv c yqtf eqwnf dg ocfg qwv.")]
+        public void CeaserCipher_WhenShiftSet_ShiftValuesThatMuch(int shift, string testString, string expected)
+        {
+            var test = StringClass.CeaserCipher(shift, testString);
+            Assert.Equal(expected, test);
+        }
+
+
+        [Theory]
+        [InlineData("joe,pat,kevin", true)]
+        [InlineData("KEVIN,dobby,patrice", true)]
+        [InlineData("john,john,morejohn",false)]
+        public void DoesTheListContainKevin(string testString, bool expected)
+        {
+            var test = StringClass.DoesListContainKevin(testString);
+
+            Assert.Equal(expected, test);
+        }
+
+        [Theory]
+        [InlineData("this is some random test string", 0)]
+        [InlineData("KeVin, get to your room; also Kevin, you need to relax", 2)]
+        [InlineData("kevin, kevin, kevin; shut up", 3)]
+        public void KevinCounter(string testString, int expected)
+        {
+            var test = StringClass.KevinCounter(testString);
+            Assert.Equal(expected, test);
+        }
     }
 }
