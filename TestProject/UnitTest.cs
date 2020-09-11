@@ -204,5 +204,27 @@ namespace TestProject
             var test = StringClass.CeaserCipher(shift, testString);
             Assert.Equal(expected, test);
         }
+
+
+        [Theory]
+        [InlineData("joe,pat,kevin", true)]
+        [InlineData("KEVIN,dobby,patrice", true)]
+        [InlineData("john,john,morejohn",false)]
+        public void DoesTheListContainKevin(string testString, bool expected)
+        {
+            var test = StringClass.DoesListContainKevin(testString);
+
+            Assert.Equal(expected, test);
+        }
+
+        [Theory]
+        [InlineData("this is some random test string", 0)]
+        [InlineData("KeVin, get to your room; also Kevin, you need to relax", 2)]
+        [InlineData("kevin, kevin, kevin; shut up", 3)]
+        public void KevinCounter(string testString, int expected)
+        {
+            var test = StringClass.KevinCounter(testString);
+            Assert.Equal(expected, test);
+        }
     }
 }

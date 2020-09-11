@@ -81,5 +81,35 @@ namespace Library
 
             return "";
         }
+
+
+        //youll need to SPLIT the string via the commas
+        //this can be done with a string function
+            //..that returns a bool - have a google and see if you can find it!
+            //becuase coding as a proffession requires being a proffesional googler
+        //Difficulty 3/5
+        public static bool DoesListContainKevin(string testString)
+        {
+            return false;
+        }
+
+        //this will require a loop
+        //HINT:
+            //its very important you consider how long the string is
+        //and dont try to look for something that is...
+        // "Exception: out of range"
+        //which happends when you try to look for a value..
+        //in an array that is higher than the length of the array
+            //EG if you have arr[7] and try to look for arr[8]
+                //computer goes LOCO
+                //an if statement can fix this problem
+
+        //so youll need to consider this
+        //Difficulty 4/5
+        
+        public static int KevinCounter(string testString)
+        {
+            return -1;
+        }
     }
 }
