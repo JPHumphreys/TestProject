@@ -119,8 +119,12 @@ namespace Library
         //this will require a loop of some sorts
         //Google ceaser cipher
             //basically shifts chars along an amount to make coded messages
-            //google ascii table
+            //google ascii table 72-98
             //google convert char to int c#
+
+            //what happends - what can you do
+            //when shifting z
+
         //this may take some time but can be fun
         //Difficulty 5/5
         public static string CeaserCipher(int shift, string testString)
