@@ -194,5 +194,15 @@ namespace TestProject
 
             Assert.Equal(result, test);
         }
+
+        [Theory]
+        [InlineData(7, "If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", "Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, aoha uva h dvyk jvbsk il thkl vba.")]
+        [InlineData(5, "If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", "Nk mj mfi fsdymnsl htsknijsynfq yt xfd, mj bwtyj ny ns hnumjw, ymfy nx, gd xt hmfslnsl ymj twijw tk ymj qjyyjwx tk ymj fqumfgjy, ymfy sty f btwi htzqi gj rfij tzy.")]
+        [InlineData(2, "If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", "Kh jg jcf cpavjkpi eqphkfgpvkcn vq uca, jg ytqvg kv kp ekrjgt, vjcv ku, da uq ejcpikpi vjg qtfgt qh vjg ngvvgtu qh vjg cnrjcdgv, vjcv pqv c yqtf eqwnf dg ocfg qwv.")]
+        public void CeaserCipher_WhenShiftSet_ShiftValuesThatMuch(int shift, string testString, string expected)
+        {
+            var test = StringClass.CeaserCipher(shift, testString);
+            Assert.Equal(expected, test);
+        }
     }
 }

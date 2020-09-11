@@ -67,5 +67,19 @@ namespace Library
 
             return true;
         }
+
+
+        //this will require a loop of some sorts
+        //Google ceaser cipher
+            //basically shifts chars along an amount to make coded messages
+            //google ascii table
+            //google convert char to int c#
+        //this may take some time but can be fun
+        //Difficulty 5/5
+        public static string CeaserCipher(int shift, string testString)
+        {
+
+            return "";
+        }
     }
 }
