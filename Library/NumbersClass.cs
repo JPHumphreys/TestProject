@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 
 namespace Library
@@ -36,6 +37,26 @@ namespace Library
             
 
             return -1;
+        }
+
+
+        //Floor returns the closest int for the value
+        //Google Math.Floor
+        //Difficulty 1/5
+        public static int FloorValue(decimal num)
+        {
+            
+            return -1;
+        }
+
+        
+        //Google Math.sqrt
+        //and maybe the thoerem
+        //Difficulty 2/5
+        public static double PythagoreanTheorem(int a, int b)
+        {
+
+            return 0.0;
         }
     }
 }

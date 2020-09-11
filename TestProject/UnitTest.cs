@@ -171,5 +171,28 @@ namespace TestProject
 
             Assert.Equal(expected, test);
         }
+
+        [Theory]
+        [InlineData(0.2018, 0)]
+        [InlineData(123.123, 123)]
+        [InlineData(-0.2, -1)]
+        public void FloorValue_WhenValueIsFloorable_ReturnCorrectValue(decimal num, int result)
+        {
+            var test = NumbersClass.FloorValue(num);
+
+            Assert.Equal(result, test);
+        }
+
+        [Theory]
+        [InlineData(2,3,3.61)]
+        [InlineData(23,5,23.54)]
+        [InlineData(7,9,11.4)]
+
+        public void PythagoreanTheorem_WhenValuesAreCorrect_ReturnCorrectValues(int a, int b, double result)
+        {
+            var test = NumbersClass.PythagoreanTheorem(a, b);
+
+            Assert.Equal(result, test);
+        }
     }
 }
