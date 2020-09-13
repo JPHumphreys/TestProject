@@ -136,12 +136,22 @@ namespace Library
 
         //youll need to SPLIT the string via the commas
         //this can be done with a string function
-            //..that returns a bool - have a google and see if you can find it!
-            //becuase coding as a proffession requires being a proffesional googler
+        //..that returns a bool - have a google and see if you can find it!
+        //becuase coding as a proffession requires being a proffesional googler
         //Difficulty 3/5
         public static bool DoesListContainKevin(string testString)
         {
-            return false;
+            var splitString = testString.Split(",");
+            var kevin = "Kevin";
+            if (testString == kevin)
+            {
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         //this will require a loop

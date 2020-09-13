@@ -61,8 +61,9 @@ namespace Library
         //Difficulty 1/5
         public static int FloorValue(decimal num)
         {
-            
-            return -1;
+            var floorNumber =  Math.Floor(num);
+            int result = Convert.ToInt32(floorNumber);
+            return result;
         }
 
         
@@ -72,7 +73,9 @@ namespace Library
         public static double PythagoreanTheorem(int a, int b)
         {
 
-            return 0.0;
+            double c = Math.Sqrt((a * a) + (b * b));
+
+            return c;
         }
     }
 }
