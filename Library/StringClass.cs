@@ -184,8 +184,6 @@ namespace Library
         {
             var stringToLookFor = "kevin";
             var counter = 0;
-            
-            
 
             for (int i = 0; i < (testString.Length - stringToLookFor.Length); i++)
             {

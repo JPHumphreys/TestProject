@@ -187,7 +187,7 @@ namespace TestProject
         [InlineData(23,5,23.54)]
         [InlineData(7,9,11.4)]
 
-        public void PythagoreanTheorem_WhenValuesAreCorrect_ReturnCorrectValues(int a, int b, double result)
+        public void PythagoreanTheorem_WhenValuesAreCorrect_ReturnCorrectValues(int a, int b, decimal result)
         {
             var test = NumbersClass.PythagoreanTheorem(a, b);
 

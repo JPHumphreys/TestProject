@@ -70,10 +70,10 @@ namespace Library
         //Google Math.sqrt
         //and maybe the thoerem
         //Difficulty 2/5
-        public static double PythagoreanTheorem(int a, int b)
+        public static decimal PythagoreanTheorem(int a, int b)
         {
 
-            double c = Math.Sqrt((a * a) + (b * b));
+            decimal c = Convert.ToDecimal(   Math.Sqrt( (a * a) + (b * b) )     );
 
             return c;
         }
