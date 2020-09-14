@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Linq;
 
 namespace Library
 {
@@ -152,9 +153,9 @@ namespace Library
         //Difficulty 3/5
         public static bool DoesListContainKevin(string testString)
         {
-            var splitString = testString.Split(",");
-            var kevin = "Kevin";
-            if (testString == kevin)
+            var lowerString = testString.ToLower();
+            var splitString = lowerString.Split(",");
+            if (splitString.Contains("kevin") )
             {
 
                 return true;
