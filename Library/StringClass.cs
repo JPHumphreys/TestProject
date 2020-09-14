@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Library
 {
     public class StringClass
@@ -129,6 +131,15 @@ namespace Library
         //Difficulty 5/5
         public static string CeaserCipher(int shift, string testString)
         {
+            var zAcsiiValue = 122;
+            var aAsciiValue = 97;
+
+            for (int i = 0; i < testString.Length; i++)
+            {
+                var currentCharAsInt = Convert.ToInt32(testString[i]);
+            }
+
+
 
             return "";
         }
@@ -170,7 +181,19 @@ namespace Library
         
         public static int KevinCounter(string testString)
         {
-            return -1;
+            var stringToLookFor = "kevin";
+            var counter = 0;
+            
+            
+
+            for (int i = 0; i < (testString.Length - stringToLookFor.Length); i++)
+            {
+                
+
+
+            }
+
+            return counter;
         }
     }
 }
