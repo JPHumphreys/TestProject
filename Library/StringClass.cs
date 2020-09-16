@@ -184,10 +184,19 @@ namespace Library
         {
             var stringToLookFor = "kevin";
             var counter = 0;
+            var lowerString = testString.ToLower();
 
-            for (int i = 0; i < (testString.Length - stringToLookFor.Length); i++)
+            for (int i = 0; i < (lowerString.Length - stringToLookFor.Length); i++)
             {
-                
+                if (lowerString.Substring(i,i+5) == stringToLookFor)
+                {
+                    counter +=1;
+
+                    if (stringToLookFor.Length > i+5) //tried multiple things here, not sure exactly what would make it stop.
+                    {
+                        return counter;
+                    }
+                }
 
 
             }
