@@ -192,9 +192,9 @@ namespace Library
                 {
                     counter +=1;
 
-                    if (stringToLookFor.Length > i+5) //tried multiple things here, not sure exactly what would make it stop.
+                    if ((i+5)>lowerString.Length)
                     {
-                        return counter;
+                        break;
                     }
                 }
 
