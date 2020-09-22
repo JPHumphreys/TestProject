@@ -134,15 +134,39 @@ namespace Library
         {
             var zAcsiiValue = 122;
             var aAsciiValue = 97;
+            string finishedString = "";
 
             for (int i = 0; i < testString.Length; i++)
             {
-                var currentCharAsInt = Convert.ToInt32(testString[i]);
+                if (testString[i] == ' ')
+                {
+                    finishedString += ' ';
+                }
+                else if (testString[i] == ',')
+                {
+                    finishedString += ',';
+                }
+                else if (testString[i] == '.')
+                {
+                    finishedString += '.';
+                }
+                else{
+                    {
+                        var currentCharAsInt = Convert.ToInt32(testString[i]);
+                        int shiftedChar = (currentCharAsInt + shift);
+                        if (shiftedChar > zAcsiiValue)
+                        {
+                            int difference = (shiftedChar - zAcsiiValue);
+                            shiftedChar = ((aAsciiValue - 1) + difference);
+                        }
+                        currentCharAsInt = shiftedChar;
+                        char shiftedString = Convert.ToChar(currentCharAsInt);
+                        finishedString += shiftedString;
+                    }
+                }
             }
 
-
-
-            return "";
+            return finishedString;
         }
 
 
@@ -188,7 +212,7 @@ namespace Library
 
             for (int i = 0; i < (lowerString.Length - stringToLookFor.Length); i++)
             {
-                if (lowerString.Substring(i,5) == stringToLookFor)
+                if (lowerString.Substring(i/*Start Index*/,5/*Length of substring*/) == stringToLookFor)
                 {
                     counter +=1;
                 }
