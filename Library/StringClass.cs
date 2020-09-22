@@ -142,18 +142,18 @@ namespace Library
                 {
                     finishedString += testString[i];
                 } 
-                else{
-                    
-                        var currentCharAsInt = Convert.ToInt32(testString[i]);
-                        int shiftedChar = (currentCharAsInt + shift);
-                        if (shiftedChar > zAcsiiValue)
-                        {
-                            int difference = (shiftedChar - zAcsiiValue);
-                            shiftedChar = ((aAsciiValue - 1) + difference);
-                        }
-                        currentCharAsInt = shiftedChar;
-                        char shiftedString = Convert.ToChar(currentCharAsInt);
-                        finishedString += shiftedString;
+                else
+                {
+                    var currentCharAsInt = Convert.ToInt32(testString[i]);
+                    currentCharAsInt += shift;
+
+                    if(currentCharAsInt > zAcsiiValue)
+                    {
+                        currentCharAsInt = (aAsciiValue - 1) + (currentCharAsInt - zAcsiiValue);
+                    }
+
+                    char shiftedString = Convert.ToChar(currentCharAsInt);
+                    finishedString += shiftedString;
                 }
             }
 
