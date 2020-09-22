@@ -188,17 +188,10 @@ namespace Library
 
             for (int i = 0; i < (lowerString.Length - stringToLookFor.Length); i++)
             {
-                if (lowerString.Substring(i,i+5) == stringToLookFor)
+                if (lowerString.Substring(i,5) == stringToLookFor)
                 {
                     counter +=1;
-
-                    if ((i+5)>lowerString.Length)
-                    {
-                        break;
-                    }
                 }
-
-
             }
 
             return counter;
