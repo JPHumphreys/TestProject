@@ -138,20 +138,12 @@ namespace Library
 
             for (int i = 0; i < testString.Length; i++)
             {
-                if (testString[i] == ' ')
+                if (testString[i] == ' ' || testString[i] == ',' || testString[i] == '.')
                 {
-                    finishedString += ' ';
-                }
-                else if (testString[i] == ',')
-                {
-                    finishedString += ',';
-                }
-                else if (testString[i] == '.')
-                {
-                    finishedString += '.';
-                }
+                    finishedString += testString[i];
+                } 
                 else{
-                    {
+                    
                         var currentCharAsInt = Convert.ToInt32(testString[i]);
                         int shiftedChar = (currentCharAsInt + shift);
                         if (shiftedChar > zAcsiiValue)
@@ -162,7 +154,6 @@ namespace Library
                         currentCharAsInt = shiftedChar;
                         char shiftedString = Convert.ToChar(currentCharAsInt);
                         finishedString += shiftedString;
-                    }
                 }
             }
 
